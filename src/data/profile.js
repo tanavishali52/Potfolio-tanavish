@@ -157,3 +157,70 @@ export const education = {
   school: 'Government College University, Faisalabad',
   period: '2021 — 2025',
 }
+
+export const agenticWorkflowPage = {
+  eyebrow: 'Agentic workflow',
+  title: 'I use AI agents to build faster, and I build products that run on them.',
+  intro:
+    'Working with AI agents is part of my normal day. I use them for the repetitive parts of development, like scaffolding, refactoring and wiring things together, so I have more time for the decisions that matter. I have also built products where LLM agents are the main feature. I still make the design calls and read every change before it goes in.',
+  capabilitiesTitle: 'What I do',
+  capabilities: [
+    {
+      title: 'Building with agents',
+      text: 'I use Claude, Cursor and Antigravity to get features started, clean up code and connect pieces together. I review what they produce and decide what stays.',
+    },
+    {
+      title: 'Agents, skills and rules',
+      text: 'I set projects up with a .claude folder: specialist agents for frontend, backend and QA, step-by-step skills for tasks I repeat, and rules for security and code style. The agent follows the same standards every time.',
+    },
+    {
+      title: 'Workflow around the code',
+      text: 'I wrote a Jira agent that creates tickets, keeps branch and commit names consistent and links PRs to issues. A PR review skill checks design, responsiveness and code quality before anything is merged.',
+    },
+    {
+      title: 'AI features in products',
+      text: 'I build on the OpenAI API and LLM orchestration, from chat interfaces to document analysis.',
+    },
+  ],
+  setupTitle: 'What I set up in NexusAI',
+  setupText:
+    'NexusAI is a platform for comparing and deploying AI models, with a Next.js frontend and a NestJS backend. I built its development workflow in the repo itself. A .claude.md file explains the architecture and standards, and each workspace has its own agents, skills and rules, so the frontend and backend agents each know their own stack.',
+  setupStats: [
+    { value: '12', label: 'specialist agents' },
+    { value: '18', label: 'reusable skills' },
+    { value: '9', label: 'rules' },
+  ],
+  setupPoints: [
+    'Agents for frontend, backend, QA, accessibility, animation, i18n, state debugging, security, database, file uploads, API versioning and Jira.',
+    'Skills for API integration, Redux slices, form validation, responsive design, NestJS guards, Mongoose schemas, Swagger docs and PR review.',
+    'Rules for security, error handling, performance, testing, accessibility and code style.',
+  ],
+  setupLink: { label: 'See the repo on GitHub', url: 'https://github.com/tanavishali52/tanavish-accessmnet1' },
+  processTitle: 'How I work with agents',
+  process: [
+    { title: 'Plan', text: 'Before I involve an agent, I decide what the task is, what the limits are and what a finished result looks like.' },
+    { title: 'Hand off', text: 'The agent takes the repetitive work: boilerplate, refactors and glue code.' },
+    { title: 'Check', text: 'I read what it wrote and run it. If it does not fit the architecture, it does not go in.' },
+    { title: 'Own it', text: 'Design, security and quality are my responsibility, no matter who wrote the first draft.' },
+  ],
+  appliedTitle: 'Where I have used it',
+  applied: [
+    {
+      title: 'NexusAI',
+      org: 'Agentic setup repo',
+      text: 'A full agent, skill and rule setup for a Next.js and NestJS project, with a Jira agent and a PR review checklist.',
+    },
+    {
+      title: 'DevOps Bot',
+      org: 'Consultancy Outfit',
+      text: 'An AI chatbot for DevOps tasks. It has a Next.js dashboard, NestJS services and a Python layer that coordinates the LLM agents.',
+    },
+    {
+      title: 'Agentic Creed',
+      org: 'Consultancy Outfit',
+      text: 'A platform for agent-based workflows and automation. I built the interface and handled how the frontend talks to the backend in real time.',
+    },
+  ],
+  toolsTitle: 'Tools',
+  tools: ['Claude', 'Claude Cowork', 'Cursor', 'Antigravity', 'OpenAI API', 'LLM orchestration', 'Skill-based tooling'],
+}

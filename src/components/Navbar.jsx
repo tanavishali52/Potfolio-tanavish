@@ -8,13 +8,15 @@ const links = [
   { href: '#projects', label: 'Projects' },
   { href: '#skills', label: 'Skills' },
   { href: '#ai', label: 'AI Workflow' },
+  { href: '#/agentic-workflow', label: 'Agentic Workflow', page: true },
 ]
 
-const ids = [...links.map((l) => l.href), '#top', '#education', '#contact']
+const ids = [...links.filter((l) => !l.page).map((l) => l.href), '#top', '#education', '#contact']
 
-function useActiveSection() {
+function useActiveSection(enabled) {
   const [active, setActive] = useState('')
   useEffect(() => {
+    if (!enabled) return
     const io = new IntersectionObserver(
       (entries) => entries.forEach((e) => e.isIntersecting && setActive('#' + e.target.id)),
       { rootMargin: '-45% 0px -50% 0px' },
@@ -24,14 +26,15 @@ function useActiveSection() {
       if (el) io.observe(el)
     })
     return () => io.disconnect()
-  }, [])
+  }, [enabled])
   return active
 }
 
-export default function Navbar({ theme, onToggleTheme }) {
+export default function Navbar({ theme, onToggleTheme, onWorkflowPage }) {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const active = useActiveSection()
+  const sectionActive = useActiveSection(!onWorkflowPage)
+  const active = onWorkflowPage ? '#/agentic-workflow' : sectionActive
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10)
